@@ -151,8 +151,6 @@ describe('Entity', () => {
 
     }) // end of should work with common fallbacks
 
-
-
     it('should work with translation blocks', () => {
 
       const tests = [
@@ -187,6 +185,32 @@ describe('Entity', () => {
       })
 
     }) // end of should work with common fallbacks
+
+
+    it('should add meta data', () => {
+      expect(Entity({
+        label: {
+          en: 'Truck',
+          fr: 'Camion'
+        }
+      }, {
+        count: 42
+      })).to.be.like({
+        id: 'truck',
+        label: {
+          en: 'Truck',
+          fr: 'Camion'
+        },
+        value: {
+          label: {
+            en: 'Truck',
+            fr: 'Camion'
+          }
+        },
+        count: 42
+      })
+
+    }) // end of should add metadata
 
   }) // end of single entity
 

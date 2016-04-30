@@ -1,6 +1,6 @@
 {
   "name": "@datagica/entity",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "registry": "github",
   "description": "Create a Datagica Entity from any input",
   "main": "./lib/entity.js",
